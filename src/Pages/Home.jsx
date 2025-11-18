@@ -209,7 +209,7 @@ export const Home = () => {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full pt-5">
       {/* hero section */}
       <div className="bg-gradient-to-r from-[#FFA500] to-[#FF6F3C] py-10">
         <div className="flex flex-col justify-center items-center text-center p-10 gap-3">
@@ -230,8 +230,8 @@ export const Home = () => {
       <div className="max-w-7xl mx-auto">
         <div className="p-4">
           {/* title Food */}
-          <h2 className="text-center pb-4 text-3xl font-light underline">
-            Foods of CookMate
+          <h2 className="text-center pb-4 text-3xl font-light">
+            Our Recipes
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">

@@ -98,14 +98,14 @@ export const Drinks = () => {
       <div className="p-4">
         {/* title Food */}
         <h2 className="text-center pb-4 text-3xl font-light underline">
-          Drinks of CookMate
+          
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
           {Drinks.map((food) => (
             <div className="flex flex-col justify-center items-center rounded-lg shadow pb-5">
               <img
-                className=" rounded-t-lg flex justify-center"
+                className=" rounded-t-lg flex justify-center hover:scale-3d "
                 src={food.image}
                 alt=""
               />
