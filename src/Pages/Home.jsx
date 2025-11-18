@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Drinks } from "../Components/Drinks";
 export const Home = () => {
   const foods = [
     {
@@ -230,7 +231,7 @@ export const Home = () => {
         <div className="p-4">
           {/* title Food */}
           <h2 className="text-center pb-4 text-3xl font-light underline">
-            Food of CookMate
+            Foods of CookMate
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
@@ -252,6 +253,8 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
+      <Drinks />
     </div>
   );
 };
