@@ -102,17 +102,17 @@ export const Drinks = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
-          {Drinks.map((food) => (
-            <div className="flex flex-col justify-center items-center rounded-lg shadow pb-5">
+          {Drinks.map((Drink) => (
+            <div key={Drink.id} className="flex flex-col justify-center items-center rounded-lg shadow pb-5">
               <img
                 className=" rounded-t-lg flex justify-center hover:scale-3d "
-                src={food.image}
+                src={Drink.image}
                 alt=""
               />
 
               <div className="text-center pt-4">
-                <h2 className="text-lg font-bold">{food.name}</h2>
-                <p className="text-gray-500 mb-4">{food.mealType}</p>
+                <h2 className="text-lg font-bold">{Drink.name}</h2>
+                <p className="text-gray-500 mb-4">{Drink.mealType}</p>
                 <Link
                   to={"/recipes"}
                   className="bg-[#FF6F3C] mt-7 px-4 py-2 rounded-full text-white"

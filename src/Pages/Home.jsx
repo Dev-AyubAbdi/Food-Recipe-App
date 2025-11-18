@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Drinks } from "../Components/Drinks";
 export const Home = () => {
@@ -208,6 +208,8 @@ export const Home = () => {
       mealType: ["Lunch", "Side Dish"],
     },
   ];
+
+  
   return (
     <div className="w-full pt-5">
       {/* hero section */}
@@ -236,7 +238,7 @@ export const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
             {foods.map((food) => (
-              <div className="flex flex-col justify-center items-center rounded-lg shadow pb-5">
+              <div key={food.id} className="flex flex-col justify-center items-center rounded-lg shadow pb-5">
                 <img
                   className=" rounded-t-lg flex justify-center"
                   src={food.image}

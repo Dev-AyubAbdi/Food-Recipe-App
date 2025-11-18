@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { FoodItems } from "../Components/FoodItems";
+import { Link } from "react-router-dom";
 
-export const Recipes = () => {
-  const [search, setSearch] = useState("");
-
- const foods = [
+export const FoodItems = ({ food }) => {
+  const foods = [
     {
       id: 1,
       name: "Classic Margherita Pizza",
@@ -210,29 +208,32 @@ export const Recipes = () => {
       mealType: ["Lunch", "Side Dish"],
     },
   ];
-  return (
-    <div className="w-full">
-      <div className="mt-5 mb-5">
-        <form className="flex justify-center">
-          <input
-            className=" border w-100 outline-0 text-shadow-2xs p-4 rounded-full h-10 mr-5"
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <button
-            type="submit"
-            className="bg-amber-400 w-30 rounded-full text-lg hover:bg-amber-500 transition-all duration-200 cursor-pointer"
-          >
-            Search
-          </button>
-        </form>
-      </div>
 
-      <div className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {foods.map((food) => (
-          <FoodItems key={food.id} food={food} />
-        ))}
+  const [food, setFood] = useState([])
+  const [laoding, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  return (
+    <div className="max-w-7xl mx-auto">
+      <div className="p-4">
+        {
+          <Link to={"/"}>
+            {" "}
+            <div className="shadow">
+              <img className="rounded-t-lg" src={food.image} alt="" />
+
+              <div className="mt-4 ml-4 pb-3">
+                <h2 className="text-lg font-semibold">{food.name}</h2>
+                <p className="pb-4">{food.mealType}</p>
+                <div>
+                  <span className="bg-amber-300 text-gray-900 rounded-full p-2">
+                    {food.difficulty}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        }
       </div>
     </div>
   );

@@ -26,19 +26,19 @@ export const Footer = () => {
             </Link>
             <Link
               className="bg-amber-50 p-2 rounded-full"
-              to={`https://instagram.com/yourusername`}
+              to={`https://tiktok.com/yourusername`}
             >
               <FaTiktok size={20} />
             </Link>
             <Link
               className="bg-amber-50 p-2 rounded-full"
-              to={`https://instagram.com/yourusername`}
+              to={`https://youtube.com/yourusername`}
             >
               <FaYoutube size={20} />
             </Link>
             <Link
               className="bg-amber-50 p-2 rounded-full"
-              to={`https://instagram.com/yourusername`}
+              to={`https://facebook.com/yourusername`}
             >
               <FaFacebookF size={20} />
             </Link>
@@ -70,10 +70,18 @@ export const Footer = () => {
         {/* Explore Pages */}
         <div className="flex flex-col gap-4">
           <h2 className="text-2xl font-bold">Explore </h2>
-          <Link className="font-medium" to={"/recipes"}>Latest Recipes</Link>
-          <Link className="font-medium" to={"/respicDetails"}>All Recipes</Link>
-          <Link className="font-medium" to={""}>Meel Recipes</Link>
-          <Link className="font-medium" to={"/Contact"}>Contact</Link>
+          <Link className="font-medium" to={"/recipes"}>
+            Latest Recipes
+          </Link>
+          <Link className="font-medium" to={"/respicDetails"}>
+            All Recipes
+          </Link>
+          <Link className="font-medium" to={""}>
+            Meel Recipes
+          </Link>
+          <Link className="font-medium" to={"/Contact"}>
+            Contact
+          </Link>
         </div>
       </div>
     </div>
