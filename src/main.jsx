@@ -9,6 +9,7 @@ import { Contact } from './Pages/Contact.jsx'
 import { RecipesDetails } from './Components/RecipesDetails.jsx'
 import { Recipes } from './Pages/recipes.jsx'
 
+
 const routerProvider = createBrowserRouter ([
   {
     path: "/",
@@ -29,7 +30,7 @@ const routerProvider = createBrowserRouter ([
       },
       {
         path: "/recipes",
-        element: <Recipes/>
+       element: <Recipes />
       },
       {
         path: "/contact",
