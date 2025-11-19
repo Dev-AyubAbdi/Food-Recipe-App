@@ -4,7 +4,6 @@ import axios from "axios";
 
 export const Recipes = () => {
   const [search, setSearch] = useState("");
-
   const [foods, setFoods] = useState([]);
   const [laoding, setLoading] = useState(false);
   const [error, setError] = useState(false);
